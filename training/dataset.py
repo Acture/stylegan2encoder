@@ -15,7 +15,7 @@ import dnnlib.tflib as tflib
 
 #----------------------------------------------------------------------------
 # Dataset class that loads data from tfrecords files.
-
+tf.compat.v1.disable_eager_execution()
 class TFRecordDataset:
     def __init__(self,
         tfrecord_dir,               # Directory containing a collection of tfrecords files.
